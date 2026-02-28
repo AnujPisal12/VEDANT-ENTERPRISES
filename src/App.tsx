@@ -16,7 +16,7 @@ const App = () => (
       <TooltipProvider>
         <Toaster />
         <Sonner />
-        <BrowserRouter>
+        <BrowserRouter basename="/VEDANT-ENTERPRISES">
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/team" element={<Team />} />
