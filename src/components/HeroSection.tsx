@@ -20,7 +20,7 @@ const HeroSection: React.FC = () => {
   return (
     <section 
       id="hero" 
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 md:pt-0"
       style={{
         backgroundImage: `url(${heroImage})`,
         backgroundSize: 'cover',
@@ -32,18 +32,18 @@ const HeroSection: React.FC = () => {
       <div className="absolute inset-0 bg-gradient-hero" />
       
       {/* Content */}
-      <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
+      <div className="relative z-10 text-center px-6 max-w-5xl mx-auto mt-8 md:mt-0">
         <div className={`fade-in-up ${isVisible ? 'animate-fade-in-up' : ''}`}>
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 tracking-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 tracking-tight leading-tight">
             Precision Plastic
-            <span className="block text-accent drop-shadow-lg">Components</span>
+            <span className="block text-accent drop-shadow-lg mt-2">Components</span>
           </h1>
         </div>
         
         <div className={`fade-in-up delay-1 ${isVisible ? 'animate-fade-in-up' : ''}`}>
-          <p className="text-xl md:text-2xl text-white/95 mb-10 leading-relaxed max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl md:text-2xl text-white/95 mb-10 leading-relaxed max-w-3xl mx-auto">
             Innovative solutions in plastic molding for automotive and industrial applications. 
-            <span className="block mt-2 text-lg text-white/80">17+ years of manufacturing excellence</span>
+            <span className="block mt-2 text-base sm:text-lg text-white/80">17+ years of manufacturing excellence</span>
           </p>
         </div>
         
