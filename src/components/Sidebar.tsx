@@ -1,7 +1,6 @@
 import React from 'react';
-import { X, Home, User, History, Briefcase, Users, Building, Phone, Sun, Moon } from 'lucide-react';
+import { X, Home, User, History, Briefcase, Users, Building, Phone } from 'lucide-react';
 import vedantLogo from '@/assets/vedant-logo.png';
-import { useTheme } from '@/contexts/ThemeContext';
 import { useNavigate } from 'react-router-dom';
 
 interface SidebarProps {
@@ -10,7 +9,6 @@ interface SidebarProps {
 }
 
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
-  const { theme, setTheme } = useTheme();
   const navigate = useNavigate();
 
   const menuItems = [
@@ -34,10 +32,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       }
     }
     onClose();
-  };
-
-  const toggleTheme = () => {
-    setTheme(theme === 'light' ? 'dark' : 'light');
   };
 
   return (
@@ -75,21 +69,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               <X className="w-5 h-5" />
             </button>
           </div>
-        </div>
-
-        {/* Theme Toggle */}
-        <div className="p-4 border-b border-primary-foreground/10">
-          <button
-            onClick={toggleTheme}
-            className="flex items-center justify-between w-full p-3 rounded-xl bg-primary-foreground/5"
-          >
-            <span className="font-medium">Theme Mode</span>
-            {theme === 'light' ? (
-              <Moon className="w-5 h-5 text-primary-foreground" />
-            ) : (
-              <Sun className="w-5 h-5 text-primary-foreground" />
-            )}
-          </button>
         </div>
 
         {/* Professional Navigation */}
