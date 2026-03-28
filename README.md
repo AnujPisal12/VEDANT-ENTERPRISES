@@ -1,73 +1,62 @@
-# Welcome to your Lovable project
+# Vedant Enterprises
 
-## Project info
+**Precision Plastic Components Manufacturing**
 
-**URL**: https://lovable.dev/projects/aea91843-9b84-4478-8046-61fa8ce2904c
+Established in 2006, Vedant Enterprises is a leading manufacturer of precision plastic components, specializing in automotive and industrial applications. With 17+ years of experience, we deliver innovative molding solutions to some of India's most trusted brands.
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## About the Company
 
-**Use Lovable**
+- **Founded:** 2006
+- **Location:** Gat No. 93, Sonawane Wasti, Bhalekar Chowk, Jyotiba Nagar, Talawade, Pune – 412114
+- **Managing Director:** Harshal Hanmantrao Shinde
+- **GSTIN:** 27BAXPS7899K1Z3
+- **Email:** vedant_en@rediffmail.com
+- **Phone:** 8975-034-567
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/aea91843-9b84-4478-8046-61fa8ce2904c) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+## What We Do
 
-**Use your preferred IDE**
+We specialize in plastic injection molding for a wide range of applications:
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+- Protective caps and covers
+- Automotive interior and exterior components
+- Handle and knob solutions
+- Machine parts (door handles, cable ties, gear knobs)
+- Hydraulic hose and pipe clamping solutions
+- Custom plastic molding as per client specifications
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+---
 
-Follow these steps:
+## Facilities
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+- 6000+ sq. ft. manufacturing floor
+- Injection molding machines: 200T, 160T, 110T
+- In-house tool room with EDM, Milling, and Pentagon Drilling
+- Metrology room with CMM for quality assurance
+- Pre-heating and temperature control systems
+- ISO-compliant quality management systems
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+---
 
-# Step 3: Install the necessary dependencies.
-npm i
+## Our Customers
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+Trusted by 15+ leading companies including JCB, Tata Batteries, Bharat Forge, General Motors, Yazaki, Faurecia, Sandhar, KSPG Automotive, and more.
 
-**Edit a file directly in GitHub**
+---
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Tech Stack (Website)
 
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
+- React + TypeScript
 - Vite
-- TypeScript
-- React
-- shadcn-ui
 - Tailwind CSS
+- shadcn/ui
+- React Router
 
-## How can I deploy this project?
+---
 
-Simply open [Lovable](https://lovable.dev/projects/aea91843-9b84-4478-8046-61fa8ce2904c) and click on Share -> Publish.
+## Live Website
 
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+[https://anujpisal12.github.io/VEDANT-ENTERPRISES/](https://anujpisal12.github.io/VEDANT-ENTERPRISES/)
