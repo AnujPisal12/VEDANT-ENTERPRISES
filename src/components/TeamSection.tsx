@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Mail } from 'lucide-react';
+import harshalImg from '@/assets/harshal.jpeg.jpeg';
 
 const TeamSection: React.FC = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -31,8 +32,8 @@ const TeamSection: React.FC = () => {
 
         <div className={`scroll-fade-in ${isVisible ? 'visible' : ''} flex justify-center`}>
           <div className="bg-card rounded-2xl shadow-medium border border-border p-10 text-center max-w-sm w-full">
-            <div className="w-24 h-24 mx-auto bg-primary/10 rounded-full flex items-center justify-center mb-6">
-              <span className="text-4xl">👨‍💼</span>
+            <div className="w-24 h-24 mx-auto rounded-full overflow-hidden mb-6 border-4 border-primary/20 shadow-medium">
+              <img src={harshalImg} alt="Harshal Hanmantrao Shinde" className="w-full h-full object-cover" />
             </div>
             <h3 className="text-2xl font-bold text-primary mb-1">Harshal Hanmantrao Shinde</h3>
             <p className="text-accent font-semibold text-lg mb-6">Managing Director</p>
