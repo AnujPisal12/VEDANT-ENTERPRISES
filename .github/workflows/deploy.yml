@@ -28,6 +28,10 @@ jobs:
       - name: Build
         run: npm run build
 
+      # GitHub Pages serves missing paths as 404; copy index so client router can load deep links
+      - name: SPA fallback for GitHub Pages
+        run: cp dist/index.html dist/404.html
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
