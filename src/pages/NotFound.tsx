@@ -1,5 +1,7 @@
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import { useEffect } from "react";
+import PageShell from "@/components/PageShell";
+import DetailPageHeader from "@/components/DetailPageHeader";
 
 const NotFound = () => {
   const location = useLocation();
@@ -12,15 +14,20 @@ const NotFound = () => {
   }, [location.pathname]);
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">404</h1>
-        <p className="text-xl text-gray-600 mb-4">Oops! Page not found</p>
-        <a href="/" className="text-blue-500 hover:text-blue-700 underline">
-          Return to Home
-        </a>
+    <PageShell>
+      <DetailPageHeader title="Page not found" subtitle="The page you requested does not exist or has been moved." />
+      <div className="container mx-auto px-4 sm:px-6 py-16 text-center">
+        <p className="text-muted-foreground mb-8">
+          Path: <code className="text-sm bg-muted px-2 py-1 rounded">{location.pathname}</code>
+        </p>
+        <Link
+          to="/"
+          className="inline-flex items-center justify-center rounded-xl bg-primary text-primary-foreground px-6 py-3 font-semibold shadow-soft hover:opacity-90 transition-opacity"
+        >
+          Return to home
+        </Link>
       </div>
-    </div>
+    </PageShell>
   );
 };
 

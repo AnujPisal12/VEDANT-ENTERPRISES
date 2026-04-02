@@ -1,31 +1,45 @@
 import React from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { ArrowRight, Mail, Phone, MapPin } from 'lucide-react';
-import vedantLogo from '@/assets/vedant-logo.png';
+import BrandLogo from '@/components/BrandLogo';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
-
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const quickLinks = [
-    { name: 'Home', href: '#hero' },
-    { name: 'About Us', href: '#about' },
-    { name: 'Our History', href: '#history' },
-    { name: 'Team', href: '#team' },
-    { name: 'Contact', href: '#contact' }
+    { name: 'Home', path: '/' },
+    { name: 'About Us', path: '/about' },
+    { name: 'Our History', path: '/history' },
+    { name: 'Facilities', path: '/facilities' },
+    { name: 'Customers', path: '/customers' },
+    { name: 'Team', path: '/team' },
+    { name: 'Contact', path: '/contact' }
   ];
 
   const serviceLinks = [
-    { name: 'Protective Caps', href: '#services' },
-    { name: 'Automotive Parts', href: '#services' },
-    { name: 'Machine Components', href: '#services' },
-    { name: 'Hydraulic Solutions', href: '#services' },
-    { name: 'Custom Molding', href: '#services' }
+    { name: 'Protective Caps', path: '/solutions' },
+    { name: 'Automotive Parts', path: '/solutions' },
+    { name: 'Machine Components', path: '/solutions' },
+    { name: 'Hydraulic Solutions', path: '/solutions' },
+    { name: 'Custom Molding', path: '/solutions' }
   ];
 
-  const scrollToSection = (href: string) => {
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+  const goTo = (path: string) => {
+    navigate(path);
+    if (path === '/' && location.pathname === '/') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+
+  const backToTop = () => {
+    if (location.pathname === '/') {
+      const el = document.querySelector('#hero');
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      navigate('/');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   };
 
@@ -37,11 +51,7 @@ const Footer: React.FC = () => {
           {/* Logo */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-3 mb-6">
-              <img 
-                src={vedantLogo} 
-                alt="Vedant Enterprises Logo" 
-                className="w-12 h-12 rounded-lg shadow-soft"
-              />
+              <BrandLogo imgClassName="w-12 h-12" />
               <div className="text-lg font-bold">
                 VEDANT ENTERPRISES
               </div>
@@ -60,9 +70,10 @@ const Footer: React.FC = () => {
             <nav className="space-y-3">
               {quickLinks.map((link) => (
                 <button
+                  type="button"
                   key={link.name}
-                  onClick={() => scrollToSection(link.href)}
-                  className="block text-secondary-foreground/80 hover:text-accent hover:translate-x-2 transition-all duration-300 text-left"
+                  onClick={() => goTo(link.path)}
+                  className="block text-secondary-foreground/80 hover:text-accent hover:translate-x-2 transition-all duration-300 text-left w-full"
                 >
                   {link.name}
                 </button>
@@ -76,9 +87,10 @@ const Footer: React.FC = () => {
             <nav className="space-y-3">
               {serviceLinks.map((link) => (
                 <button
+                  type="button"
                   key={link.name}
-                  onClick={() => scrollToSection(link.href)}
-                  className="block text-secondary-foreground/80 hover:text-accent hover:translate-x-2 transition-all duration-300 text-left"
+                  onClick={() => goTo(link.path)}
+                  className="block text-secondary-foreground/80 hover:text-accent hover:translate-x-2 transition-all duration-300 text-left w-full"
                 >
                   {link.name}
                 </button>
@@ -139,7 +151,8 @@ const Footer: React.FC = () => {
 
         {/* Back to Top */}
         <button
-          onClick={() => scrollToSection('#hero')}
+          type="button"
+          onClick={backToTop}
           className="fixed bottom-8 right-8 w-12 h-12 bg-accent text-accent-foreground rounded-full shadow-accent hover:shadow-xl transition-all duration-300 hover:scale-110 flex items-center justify-center z-30"
           aria-label="Back to top"
         >

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Menu, Sun, Moon } from 'lucide-react';
-import vedantLogo from '@/assets/vedant-logo.png';
+import BrandLogo from '@/components/BrandLogo';
 import { useTheme } from '@/contexts/ThemeContext';
 
 interface HeaderProps {
@@ -39,11 +39,7 @@ const Header: React.FC<HeaderProps> = ({ onSidebarToggle }) => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center space-x-2 sm:space-x-4">
-            <img
-              src={vedantLogo}
-              alt="Vedant Enterprises Logo"
-              className="w-10 h-10 sm:w-14 sm:h-14 rounded-xl shadow-medium"
-            />
+            <BrandLogo />
             <div>
               <h1 className="text-base sm:text-xl md:text-2xl font-bold text-gradient-professional">
                 VEDANT ENTERPRISES
@@ -58,8 +54,9 @@ const Header: React.FC<HeaderProps> = ({ onSidebarToggle }) => {
           <div className="flex items-center space-x-2">
             {/* Theme Toggle */}
             <button
+              type="button"
               onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
-              className="p-2 sm:p-3 rounded-xl bg-primary/10 text-primary shadow-soft"
+              className="p-2 sm:p-3 rounded-xl bg-primary/10 text-primary shadow-soft focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
               aria-label="Toggle theme"
             >
               {theme === 'light' ? (
@@ -71,8 +68,10 @@ const Header: React.FC<HeaderProps> = ({ onSidebarToggle }) => {
 
             {/* Sidebar Toggle */}
             <button
+              type="button"
               onClick={onSidebarToggle}
-              className="p-2 sm:p-3 rounded-xl bg-primary/10 text-primary shadow-soft"
+              className="p-2 sm:p-3 rounded-xl bg-primary/10 text-primary shadow-soft focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+              aria-label="Open menu"
             >
               <Menu className="w-5 h-5 sm:w-6 sm:h-6" />
             </button>
